@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import { Reveal, HoverZoom } from '@/components/anim';
+import { Reveal } from '@/components/anim';
 import SmartLink from '@/components/SmartLink';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import { TESTIMONIALS } from '@/data/testimonials';
@@ -46,13 +46,13 @@ export default function HomePage() {
             </Reveal>
           </div>
           <Reveal y={28} delay={240} dur={1100}>
-            <HoverZoom style={{ width: '100%', height: 680 }} scale={1.03}>
+            <div style={{ width: '100%', height: 680, overflow: 'hidden' }}>
               <img
                 src="/images/hero.jpg"
                 alt="Inside Salon Matarazzo — the studio floor in Bellevue, WA"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
               />
-            </HoverZoom>
+            </div>
           </Reveal>
         </div>
       </header>
