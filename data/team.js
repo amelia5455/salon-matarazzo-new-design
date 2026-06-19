@@ -97,7 +97,7 @@ export const TEAM = [
       "Lisa is attentive to her clients' needs, and loves creating fresh new styles or subtle seasonal changes. Book a time with Lisa online or call the salon directly — let's get you looking and feeling even more fabulous.",
     ],
   },
-  { id: 'rose',      first: 'Rose',      last: 'Schwartzhoff',tag: 'Stylist', group: 'Stylists', bio: '' },
+  { id: 'rose',      first: 'Rose',      last: 'Schwartzhoff',tag: 'Stylist', group: 'Stylists', bio: "With many years of experience in Bellevue's beauty industry, Rose is a Senior Hairstylist known for creating personalized, modern looks that enhance each client's natural beauty. Specializing in precision cuts, she is passionate about helping clients feel confident and refreshed. Her attention to detail, warm personality, and commitment to staying current with trends have earned her a loyal clientele throughout the Bellevue area." },
   { id: 'shannon',   first: 'Shannon',   last: 'Saarinen',    tag: 'Stylist', group: 'Stylists',
     bio: [
       "Shannon specializes in precision hair cutting, styling, and color techniques. Before attending Greenwood Academy of Hair in Seattle, she worked as a makeup artist focused on mineral and bridal makeup, and did freelance work for film.",
