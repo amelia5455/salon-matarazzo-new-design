@@ -1,3 +1,6 @@
+'use client';
+
+import { useState } from 'react';
 import SmartLink from './SmartLink';
 
 const LINKS = [
@@ -10,28 +13,44 @@ const LINKS = [
 const BOOK_URL = 'https://www.vagaro.com/salonmatarazzo/book-now';
 
 export default function SiteNav({ active }) {
+  const [open, setOpen] = useState(false);
+  const close = () => setOpen(false);
+
   return (
-    <nav style={{
-      padding: '28px 56px',
-      display: 'grid', gridTemplateColumns: '1fr auto 1fr', alignItems: 'center',
-      background: 'var(--paper)', color: 'var(--ink)', position: 'sticky', top: 0, zIndex: 20,
-      borderBottom: '1px solid rgba(28,28,28,.06)',
-    }}>
-      <SmartLink href="/" className="serif" style={{
-        fontSize: 40, color: 'var(--ink)', letterSpacing: '.01em',
-        fontWeight: 500, textDecoration: 'none', justifySelf: 'start',
-      }}>
+    <nav className="sm-nav">
+      <SmartLink href="/" className="sm-nav__brand serif" onClick={close}>
         SALON MATARAZZO
       </SmartLink>
-      <div style={{ display: 'flex', gap: 48 }}>
+
+      <div className="sm-nav__links">
         {LINKS.map((l) => (
           <SmartLink key={l.key} className={'link' + (active === l.key ? ' active' : '')} href={l.href}>
             {l.label}
           </SmartLink>
         ))}
       </div>
-      <div style={{ justifySelf: 'end' }}>
+
+      <div className="sm-nav__cta">
         <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill">Book</a>
+      </div>
+
+      <button
+        type="button"
+        className="sm-nav__burger"
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+      >
+        <span /><span /><span />
+      </button>
+
+      <div className={'sm-nav__drawer' + (open ? ' open' : '')}>
+        {LINKS.map((l) => (
+          <SmartLink key={l.key} className={'link' + (active === l.key ? ' active' : '')} href={l.href} onClick={close}>
+            {l.label}
+          </SmartLink>
+        ))}
+        <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill" onClick={close}>Book</a>
       </div>
     </nav>
   );
