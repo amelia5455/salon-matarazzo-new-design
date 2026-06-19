@@ -15,15 +15,16 @@ export default function BrandCell({ idx, id, num, name, origin, tagline, logo })
         <div style={{
           width: '100%', aspectRatio: '5 / 3',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
+          background: logo ? '#ffffff' : 'transparent',
+          borderRadius: 4,
+          padding: logo ? '6%' : 0,
+          overflow: 'hidden',
         }}>
           {logo ? (
             <img
               src={logo}
               alt={`${name} logo`}
-              style={{
-                maxWidth: '78%', maxHeight: '70%', objectFit: 'contain',
-                mixBlendMode: 'multiply',
-              }}
+              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
             />
           ) : (
             <ImageSlot
