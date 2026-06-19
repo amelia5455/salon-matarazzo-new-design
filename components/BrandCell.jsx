@@ -2,7 +2,7 @@ import { Reveal } from '@/components/anim';
 import ImageSlot from '@/components/ImageSlot';
 
 /* ─── Brand cell ─────────────────────────────────────────────────── */
-export default function BrandCell({ idx, id, num, name, origin, tagline }) {
+export default function BrandCell({ idx, id, num, name, origin, tagline, logo }) {
   return (
     <Reveal y={20} delay={60 + (idx % 3) * 60}>
       <article style={{
@@ -11,16 +11,27 @@ export default function BrandCell({ idx, id, num, name, origin, tagline }) {
         gridTemplateRows: '1fr auto',
         rowGap: 18,
       }}>
-        {/* Logo slot - user drops the brand mark here */}
+        {/* Logo slot */}
         <div style={{
           width: '100%', aspectRatio: '5 / 3',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
         }}>
-          <ImageSlot
-            shape="rect"
-            placeholder={`${name} logo`}
-            style={{ width: '100%', height: '100%' }}
-          />
+          {logo ? (
+            <img
+              src={logo}
+              alt={`${name} logo`}
+              style={{
+                maxWidth: '78%', maxHeight: '70%', objectFit: 'contain',
+                mixBlendMode: 'multiply',
+              }}
+            />
+          ) : (
+            <ImageSlot
+              shape="rect"
+              placeholder={`${name} logo`}
+              style={{ width: '100%', height: '100%' }}
+            />
+          )}
         </div>
 
         {/* Caption: brand name + italic tagline */}
