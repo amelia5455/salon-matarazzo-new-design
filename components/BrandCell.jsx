@@ -16,7 +16,7 @@ export default function BrandCell({ idx, id, num, name, origin, tagline, logo })
           width: '100%', aspectRatio: '5 / 3',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
           background: logo ? '#ffffff' : 'transparent',
-          border: logo ? '1px solid rgba(28,28,28,.12)' : 'none',
+          border: logo ? '1px solid rgba(28,28,28,.28)' : 'none',
           borderRadius: 4,
           padding: logo ? '6%' : 0,
           overflow: 'hidden',
