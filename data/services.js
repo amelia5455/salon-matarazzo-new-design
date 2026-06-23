@@ -6,6 +6,7 @@ export const SERVICES = [
     tagline: 'A cut built for the long term.',
     body: 'We cut for how your hair actually moves. Dry consultation first, wet-cut for structure, dry-cut to finish. Add a blowout, an updo, or a fast tidy of bangs and neckline at no charge.',
     slotId: 'srv-haircut',
+    image: '/images/services/haircut.jpg',
     placeholder: 'Haircut portrait - texture, shape, finish',
     services: [
       { label: "Women's haircut", price: 'Starting at $80' },
@@ -23,6 +24,7 @@ export const SERVICES = [
     tagline: 'Hair color, considered season by season.',
     body: 'Single-process tints, semi-permanent refreshes, all-over lift, and the careful work of bringing color back when it has gone somewhere it shouldn\'t. Every visit begins with a consultation.',
     slotId: 'srv-single-multi',
+    image: '/images/services/single-multi.jpg',
     placeholder: 'Color portrait - gloss, tint, refresh',
     services: [
       { label: 'Semi-permanent', price: 'Starting at $80' },
@@ -39,6 +41,7 @@ export const SERVICES = [
     tagline: 'Dimension that reads as natural in any light.',
     body: 'Foil placement and freehand painting, mapped to how the light actually falls on you. We choose between full and partial coverage at the chair, not on the booking form.',
     slotId: 'srv-highlights',
+    image: '/images/services/highlights.jpg',
     placeholder: 'Highlight portrait - foil, balayage, dimension',
     services: [
       { label: 'Full foil', price: 'Starting at $175' },
@@ -54,6 +57,7 @@ export const SERVICES = [
     tagline: 'Care that compounds, visit after visit.',
     body: 'Smoothing systems, conditioning rituals, perms, and extensions — the slower work that keeps a head of hair feeling like itself between appointments. Several services are priced at the chair so we can match the method to what we find.',
     slotId: 'srv-other',
+    image: '/images/services/other.jpg',
     placeholder: 'Treatment portrait - smoothing, conditioning, extensions',
     services: [
       { label: 'Perm', price: 'Assessed at consult' },

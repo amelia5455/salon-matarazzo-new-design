@@ -3,7 +3,7 @@ import ImageSlot from '@/components/ImageSlot';
 
 /* A single service row: number, image, copy + price list. Used by the
  * Services page over the SERVICES data array. */
-export default function ServiceRow({ idx, num, name, tagline, body, slotId, placeholder, services, last }) {
+export default function ServiceRow({ idx, num, name, tagline, body, slotId, image, placeholder, services, last }) {
   return (
     <>
       <Reveal y={28} delay={80}>
@@ -22,11 +22,19 @@ export default function ServiceRow({ idx, num, name, tagline, body, slotId, plac
           {/* Image */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <HoverZoom style={{ width: 380, height: 460 }} scale={1.04}>
-              <ImageSlot
-                style={{ width: '100%', height: '100%' }}
-                shape="rect"
-                placeholder={placeholder}
-              />
+              {image ? (
+                <img
+                  src={image}
+                  alt={name}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+                />
+              ) : (
+                <ImageSlot
+                  style={{ width: '100%', height: '100%' }}
+                  shape="rect"
+                  placeholder={placeholder}
+                />
+              )}
             </HoverZoom>
           </div>
 
