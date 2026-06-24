@@ -9,7 +9,7 @@ export default function ServiceRow({ idx, num, name, tagline, body, slotId, imag
       <Reveal y={28} delay={80}>
         <div style={{
           display: 'grid',
-          gridTemplateColumns: '80px 1fr 1fr',
+          gridTemplateColumns: '80px 380px 1fr',
           gap: 80,
           alignItems: 'start',
           padding: '120px 0'
