@@ -1,4 +1,4 @@
-import { Reveal, HoverZoom } from '@/components/anim';
+import { Reveal } from '@/components/anim';
 import ImageSlot from '@/components/ImageSlot';
 
 /* A single service row: number, image, copy + price list. Used by the
@@ -21,7 +21,7 @@ export default function ServiceRow({ idx, num, name, tagline, body, slotId, imag
 
           {/* Image */}
           <div style={{ display: 'flex', justifyContent: 'center' }}>
-            <HoverZoom style={{ width: 380, height: 460 }} scale={1.04}>
+            <div style={{ width: 380, height: 460, overflow: 'hidden', position: 'relative' }}>
               {image ? (
                 <img
                   src={image}
@@ -35,7 +35,7 @@ export default function ServiceRow({ idx, num, name, tagline, body, slotId, imag
                   placeholder={placeholder}
                 />
               )}
-            </HoverZoom>
+            </div>
           </div>
 
           {/* Copy */}
