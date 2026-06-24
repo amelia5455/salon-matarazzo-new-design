@@ -731,6 +731,8 @@ img { display: block; max-width: 100%; }
         @media (max-width: 1024px) {
           .sm-srv nav, .sm-srv header, .sm-srv section, .sm-srv footer { padding-left: 40px !important; padding-right: 40px !important; }
         }
+        /* Editorial image: full-bleed, flush against the dark service list */
+        .sm-srv section.srv-editorial { padding-left: 0 !important; padding-right: 0 !important; padding-bottom: 0 !important; }
         @media (max-width: 820px) {
           .sm-srv [style*="grid-template-columns"]:not(nav) { grid-template-columns: 1fr !important; }
           .sm-srv [style*="grid-template-columns"], .sm-srv [style*="grid-template-columns"] > * { min-width: 0 !important; }

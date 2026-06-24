@@ -33,7 +33,7 @@ export default function ServicesPage() {
       </header>
 
       {/* ── Editorial image ────────────────────────────────────────── */}
-      <section style={{ padding: '24px 0 96px' }}>
+      <section className="srv-editorial" style={{ padding: '24px 0 0' }}>
         <Reveal y={32} delay={240} dur={1200}>
           <div style={{ width: '100%', height: 620, overflow: 'hidden' }}>
             <img
