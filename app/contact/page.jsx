@@ -37,7 +37,7 @@ export default function ContactPage() {
       </header>
 
       {/* ── Full-bleed Google Map ──────────────────────────────────── */}
-      <section style={{ padding: '32px 0 0' }}>
+      <section className="full-bleed" style={{ padding: '32px 0 0' }}>
         <Reveal y={28} delay={120} dur={1100}>
           <div style={{
             position: 'relative', width: '100%', height: 380,

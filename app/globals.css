@@ -455,6 +455,22 @@ body { background: #FFFEF2; color: #1C1C1C; font-family: "Manrope", system-ui, s
 a { color: inherit; }
 img { display: block; max-width: 100%; }
 
+/* ============ Large-display content cap ============
+   On very wide screens, grow the side gutters so content tops out at a
+   comfortable measure (~1588px) and stays centered, while section
+   backgrounds remain full-bleed. Seamless at <=1700px (gutter resolves to
+   the design's 56px), so normal laptops/desktops are unchanged. Full-bleed
+   sections (map, editorial image) are exempt so they stay edge-to-edge. */
+@media (min-width: 1700px) {
+  nav.sm-nav,
+  main > header,
+  main > section:not(.full-bleed):not(.srv-editorial),
+  footer {
+    padding-left: calc((100vw - 1588px) / 2) !important;
+    padding-right: calc((100vw - 1588px) / 2) !important;
+  }
+}
+
 /* ============ index page styles ============ */
 
         .sm-home {
@@ -647,6 +663,9 @@ img { display: block; max-width: 100%; }
       
         /* ===== Responsive (mobile / tablet) ===== */
         .sm-home * { max-width: 100%; }
+        /* Heading scaling only on tablet/phone; desktop keeps the designed
+           fixed sizes so letter-spacing (set in em) stays stable. */
+        @media (max-width: 1024px) {
         .sm-home [style*="font-size:168px"] { font-size: clamp(46px, 15vw, 168px) !important; }
         .sm-home [style*="font-size:144px"] { font-size: clamp(42px, 13.5vw, 144px) !important; }
         .sm-home [style*="font-size:112px"] { font-size: clamp(34px, 10.5vw, 112px) !important; }
@@ -654,6 +673,7 @@ img { display: block; max-width: 100%; }
         .sm-home [style*="font-size:72px"]  { font-size: clamp(32px, 8vw, 72px) !important; }
         .sm-home [style*="font-size:56px"]  { font-size: clamp(32px, 8vw, 56px) !important; }
         .sm-home [style*="font-size:44px"]  { font-size: clamp(27px, 6.5vw, 44px) !important; }
+        }
         @media (max-width: 1024px) {
           .sm-home nav, .sm-home header, .sm-home section, .sm-home footer { padding-left: 40px !important; padding-right: 40px !important; }
         }
@@ -721,6 +741,7 @@ img { display: block; max-width: 100%; }
       
         /* ===== Responsive (mobile / tablet) ===== */
         .sm-srv * { max-width: 100%; }
+        @media (max-width: 1024px) {
         .sm-srv [style*="font-size:168px"] { font-size: clamp(46px, 15vw, 168px) !important; }
         .sm-srv [style*="font-size:144px"] { font-size: clamp(42px, 13.5vw, 144px) !important; }
         .sm-srv [style*="font-size:112px"] { font-size: clamp(34px, 10.5vw, 112px) !important; }
@@ -728,6 +749,7 @@ img { display: block; max-width: 100%; }
         .sm-srv [style*="font-size:72px"]  { font-size: clamp(32px, 8vw, 72px) !important; }
         .sm-srv [style*="font-size:56px"]  { font-size: clamp(32px, 8vw, 56px) !important; }
         .sm-srv [style*="font-size:44px"]  { font-size: clamp(27px, 6.5vw, 44px) !important; }
+        }
         @media (max-width: 1024px) {
           .sm-srv nav, .sm-srv header, .sm-srv section, .sm-srv footer { padding-left: 40px !important; padding-right: 40px !important; }
         }
@@ -897,6 +919,7 @@ img { display: block; max-width: 100%; }
       
         /* ===== Responsive (mobile / tablet) ===== */
         .sm-team * { max-width: 100%; }
+        @media (max-width: 1024px) {
         .sm-team [style*="font-size:168px"] { font-size: clamp(46px, 15vw, 168px) !important; }
         .sm-team [style*="font-size:144px"] { font-size: clamp(42px, 13.5vw, 144px) !important; }
         .sm-team [style*="font-size:112px"] { font-size: clamp(34px, 10.5vw, 112px) !important; }
@@ -904,6 +927,7 @@ img { display: block; max-width: 100%; }
         .sm-team [style*="font-size:72px"]  { font-size: clamp(32px, 8vw, 72px) !important; }
         .sm-team [style*="font-size:56px"]  { font-size: clamp(32px, 8vw, 56px) !important; }
         .sm-team [style*="font-size:44px"]  { font-size: clamp(27px, 6.5vw, 44px) !important; }
+        }
         @media (max-width: 1024px) {
           .sm-team nav, .sm-team header, .sm-team section, .sm-team footer { padding-left: 40px !important; padding-right: 40px !important; }
         }
@@ -974,6 +998,7 @@ img { display: block; max-width: 100%; }
       
         /* ===== Responsive (mobile / tablet) ===== */
         .sm-prd * { max-width: 100%; }
+        @media (max-width: 1024px) {
         .sm-prd [style*="font-size:168px"] { font-size: clamp(46px, 15vw, 168px) !important; }
         .sm-prd [style*="font-size:144px"] { font-size: clamp(42px, 13.5vw, 144px) !important; }
         .sm-prd [style*="font-size:112px"] { font-size: clamp(34px, 10.5vw, 112px) !important; }
@@ -981,6 +1006,7 @@ img { display: block; max-width: 100%; }
         .sm-prd [style*="font-size:72px"]  { font-size: clamp(32px, 8vw, 72px) !important; }
         .sm-prd [style*="font-size:56px"]  { font-size: clamp(32px, 8vw, 56px) !important; }
         .sm-prd [style*="font-size:44px"]  { font-size: clamp(27px, 6.5vw, 44px) !important; }
+        }
         @media (max-width: 1024px) {
           .sm-prd nav, .sm-prd header, .sm-prd section, .sm-prd footer { padding-left: 40px !important; padding-right: 40px !important; }
         }
@@ -1063,6 +1089,7 @@ img { display: block; max-width: 100%; }
       
         /* ===== Responsive (mobile / tablet) ===== */
         .sm-ctc * { max-width: 100%; }
+        @media (max-width: 1024px) {
         .sm-ctc [style*="font-size:168px"] { font-size: clamp(46px, 15vw, 168px) !important; }
         .sm-ctc [style*="font-size:144px"] { font-size: clamp(42px, 13.5vw, 144px) !important; }
         .sm-ctc [style*="font-size:112px"] { font-size: clamp(34px, 10.5vw, 112px) !important; }
@@ -1070,6 +1097,7 @@ img { display: block; max-width: 100%; }
         .sm-ctc [style*="font-size:72px"]  { font-size: clamp(32px, 8vw, 72px) !important; }
         .sm-ctc [style*="font-size:56px"]  { font-size: clamp(32px, 8vw, 56px) !important; }
         .sm-ctc [style*="font-size:44px"]  { font-size: clamp(27px, 6.5vw, 44px) !important; }
+        }
         @media (max-width: 1024px) {
           .sm-ctc nav, .sm-ctc header, .sm-ctc section, .sm-ctc footer { padding-left: 40px !important; padding-right: 40px !important; }
         }
