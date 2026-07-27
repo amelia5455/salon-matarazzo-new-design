@@ -38,7 +38,7 @@ export default function HomePage() {
             </Reveal>
             <Reveal y={12} delay={480}>
               <div style={{ display: 'inline-flex', gap: 18, marginTop: 36, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill">Book a chair</a>
+                <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill">Book a service</a>
                 <SmartLink href="/services" className="link" style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 0', fontSize: 14, letterSpacing: '.05em' }}>
                   See the services
                 </SmartLink>
@@ -128,7 +128,7 @@ export default function HomePage() {
         </Reveal>
         <Reveal y={14} delay={340}>
           <p className="grotesk" style={{ fontSize: 17, lineHeight: 1.6, color: 'rgba(255,254,242,.7)', margin: '56px auto 0', maxWidth: 540 }}>
-            A first visit takes ninety minutes - a conversation, a consultation, and the beginning of a strong client-stylist relationship.
+            First visit starts with a consultation and the beginning of a strong client-stylist relationship.
           </p>
         </Reveal>
         <Reveal y={12} delay={480}>
