@@ -46,7 +46,7 @@ export default function ServicesPage() {
       </section>
 
       {/* ── Service-list section ───────────────────────────────────── */}
-      <section className="on-dark" style={{ background: 'var(--ink)', color: 'var(--paper)', padding: '40px 56px 120px' }}>
+      <section className="on-dark" style={{ background: 'var(--ink)', color: 'var(--paper)', padding: '40px 56px 140px' }}>
         {SERVICES.map((s, i) =>
           <ServiceRow key={s.id} idx={i} {...s} last={i === SERVICES.length - 1} />
         )}

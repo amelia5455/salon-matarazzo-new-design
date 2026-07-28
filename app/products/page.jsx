@@ -33,7 +33,7 @@ export default function ProductsPage() {
       </header>
 
       {/* ── Compact brand grid ─────────────────────────────────────── */}
-      <section style={{ padding: '32px 56px 140px' }}>
+      <section style={{ padding: '24px 56px 140px' }}>
         <Reveal y={20} delay={80}>
           <div style={{
             paddingBottom: 36,

@@ -7,7 +7,7 @@ export default function SiteFooter() {
   return (
     <footer style={{
       background: 'var(--accent)', color: 'var(--ink)',
-      padding: '120px 96px 48px', backgroundColor: 'rgb(207, 170, 2)',
+      padding: '120px 56px 48px', backgroundColor: 'rgb(207, 170, 2)',
     }}>
       <div className="footer-main" style={{
         display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto',

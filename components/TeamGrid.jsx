@@ -19,7 +19,7 @@ export default function TeamGrid() {
   return (
     <>
       {/* ── Filter row ─────────────────────────────────────────────── */}
-      <section style={{ padding: '64px 56px 40px' }}>
+      <section style={{ padding: '24px 56px 40px' }}>
         <div style={{
           display: 'flex', justifyContent: 'space-between', alignItems: 'center',
           gap: 24, flexWrap: 'wrap',

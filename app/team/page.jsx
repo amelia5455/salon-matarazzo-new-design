@@ -12,7 +12,7 @@ export default function TeamPage() {
   return (
     <PageShell wrapper="sm-team" active="team">
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header style={{ padding: '80px 56px 40px' }}>
+      <header style={{ padding: '80px 56px 56px' }}>
         <Reveal y={12} delay={80}>
           <div className="eyebrow" style={{ color: 'var(--accent-deep)' }}>
             <span style={{
@@ -37,7 +37,7 @@ export default function TeamPage() {
         <Reveal y={14} delay={360}>
           <p className="grotesk" style={{
             fontSize: 18, lineHeight: 1.6, color: 'rgba(28,28,28,.78)',
-            margin: '48px 0 0', maxWidth: 560,
+            margin: '40px 0 0', maxWidth: 560,
           }}>
             Senior colorists and cutters - most have been in the chair for
             more than a decade. Quiet practice, individual to each guest.

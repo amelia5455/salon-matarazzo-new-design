@@ -12,7 +12,7 @@ export default function ContactPage() {
   return (
     <PageShell wrapper="sm-ctc" active="contact">
       {/* ── Hero ───────────────────────────────────────────────────── */}
-      <header style={{ padding: '80px 56px 40px' }}>
+      <header style={{ padding: '80px 56px 56px' }}>
         <Reveal y={12} delay={80}>
           <div className="eyebrow" style={{ color: 'var(--accent-deep)' }}>
             <span style={{
@@ -37,7 +37,7 @@ export default function ContactPage() {
       </header>
 
       {/* ── Full-bleed Google Map ──────────────────────────────────── */}
-      <section className="full-bleed" style={{ padding: '32px 0 0' }}>
+      <section className="full-bleed" style={{ padding: '24px 0 0' }}>
         <Reveal y={28} delay={120} dur={1100}>
           <div style={{
             position: 'relative', width: '100%', height: 380,
