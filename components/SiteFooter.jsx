@@ -51,9 +51,9 @@ export default function SiteFooter() {
           />
         </div>
       </div>
-      <div style={{
+      <div className="footer-credit-bar" style={{
         paddingTop: 32, borderTop: '1px solid rgba(28,28,28,.22)',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 16,
       }}>
         <div className="grotesk" style={{ fontSize: 14, color: 'rgba(28,28,28,.65)' }}>
           © 2026 Salon Matarazzo. All rights reserved.
@@ -61,8 +61,8 @@ export default function SiteFooter() {
         <div className="grotesk" style={{ fontSize: 14, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--ink)' }}>
           DESIGNED BY{' '}
           <a href="https://ameliarsimpson.com" target="_blank" rel="noreferrer"
-            style={{ color: 'var(--ink)', textDecoration: 'underline', textUnderlineOffset: 3 }}>
-            AMELIA SIMPSON
+            style={{ color: 'var(--ink)', textDecoration: 'underline', textUnderlineOffset: 3, whiteSpace: 'nowrap' }}>
+            AMELIA&nbsp;SIMPSON
           </a>
         </div>
       </div>
