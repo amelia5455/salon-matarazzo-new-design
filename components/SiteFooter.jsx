@@ -9,8 +9,8 @@ export default function SiteFooter() {
       background: 'var(--accent)', color: 'var(--ink)',
       padding: '120px 96px 48px', backgroundColor: 'rgb(207, 170, 2)',
     }}>
-      <div style={{
-        display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)',
+      <div className="footer-main" style={{
+        display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) auto',
         gap: 80, paddingBottom: 120, alignItems: 'start',
       }}>
         <div>
@@ -23,7 +23,7 @@ export default function SiteFooter() {
             An Eastside salon, Bellevue-born. Quiet craft since 1990.
           </p>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'space-between', gap: 56, flexWrap: 'wrap' }}>
+        <div className="footer-cols" style={{ display: 'flex', justifyContent: 'space-between', gap: 56, flexWrap: 'wrap' }}>
           <FooterCol
             heading="Navigate"
             items={[
