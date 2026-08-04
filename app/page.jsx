@@ -1,5 +1,5 @@
 import PageShell from '@/components/PageShell';
-import { Reveal, LinesReveal } from '@/components/anim';
+import { Reveal } from '@/components/anim';
 import SmartLink from '@/components/SmartLink';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import { TESTIMONIALS } from '@/data/testimonials';
@@ -37,16 +37,12 @@ export default function HomePage() {
           background: 'rgba(28,28,28,.48)',
         }} />
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 980 }}>
-          <LinesReveal
-            as="h1"
-            className="serif"
-            delay={160}
-            style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}
-            lines={[
-              'Styling Bellevue',
-              <span key="l2" style={{ fontWeight: 400, color: 'var(--accent)' }}>since 1990.</span>,
-            ]}
-          />
+          <Reveal y={28} delay={160} dur={1100}>
+            <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
+              Styling Bellevue<br />
+              <span style={{ fontWeight: 400, color: 'var(--accent)' }}>since 1990.</span>
+            </h1>
+          </Reveal>
           <Reveal y={14} delay={360}>
             <p className="grotesk" style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(255,254,242,.82)', margin: '40px auto 0', maxWidth: 480 }}>
               A studio of considered colorists and cutters - quietly setting the standard for the Eastside.
@@ -73,15 +69,12 @@ export default function HomePage() {
           </div>
         </Reveal>
         <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 96, alignItems: 'start', marginTop: 56 }}>
-          <LinesReveal
-            delay={160}
-            className="serif"
-            style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}
-            lines={[
-              'Thirty-six years,',
-              <span key="l2" style={{ fontWeight: 400, color: 'var(--accent)' }}>one client at a time.</span>,
-            ]}
-          />
+          <Reveal y={24} delay={160} dur={1100}>
+            <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
+              Thirty-six years,<br />
+              <span style={{ fontWeight: 400, color: 'var(--accent)' }}>one client at a time.</span>
+            </h2>
+          </Reveal>
           <div style={{ paddingTop: 24 }}>
             <Reveal y={20} delay={240}>
               <p className="serif" style={{ fontSize: 24, lineHeight: 1.45, color: 'var(--paper)', margin: 0, maxWidth: 520 }}>
@@ -111,15 +104,12 @@ export default function HomePage() {
             </span>
           </div>
         </Reveal>
-        <LinesReveal
-          delay={140}
-          className="serif"
-          style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--ink)', margin: '36px 0 80px', maxWidth: 1000 }}
-          lines={[
-            'Kind words,',
-            <span key="l2" style={{ fontWeight: 400, color: 'var(--accent-deep)' }}>year after year.</span>,
-          ]}
-        />
+        <Reveal y={24} delay={140} dur={1100}>
+          <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--ink)', margin: '36px 0 80px', maxWidth: 1000 }}>
+            Kind words,<br />
+            <span style={{ fontWeight: 400, color: 'var(--accent-deep)' }}>year after year.</span>
+          </h2>
+        </Reveal>
         <TestimonialCarousel items={TESTIMONIALS} />
       </section>
 
@@ -132,15 +122,12 @@ export default function HomePage() {
             </span>
           </div>
         </Reveal>
-        <LinesReveal
-          delay={160}
-          className="serif"
-          style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '48px 0 0' }}
-          lines={[
-            'Sit in our',
-            <span key="l2" style={{ fontWeight: 400, color: 'var(--accent)' }}>chair.</span>,
-          ]}
-        />
+        <Reveal y={28} delay={160} dur={1100}>
+          <h2 className="serif" style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '48px 0 0' }}>
+            Sit in our<br />
+            <span style={{ fontWeight: 400, color: 'var(--accent)' }}>chair.</span>
+          </h2>
+        </Reveal>
         <Reveal y={14} delay={340}>
           <p className="grotesk" style={{ fontSize: 17, lineHeight: 1.6, color: 'rgba(255,254,242,.7)', margin: '56px auto 0', maxWidth: 540 }}>
             First visit starts with a consultation and the beginning of a strong client-stylist relationship.
