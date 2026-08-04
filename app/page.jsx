@@ -14,44 +14,53 @@ export const metadata = {
 export default function HomePage() {
   return (
     <PageShell wrapper="sm-home" active="home">
-      {/* Hero */}
-      <header style={{ padding: '80px 56px 80px', color: 'rgb(168, 136, 10)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '1.05fr 1fr', gap: 64, alignItems: 'center' }}>
-          <div>
-            <Reveal y={12} delay={80}>
-              <div className="eyebrow" style={{ color: 'var(--accent-deep)' }}>
-                <span style={{ display: 'inline-block', borderTop: '1px solid var(--accent-deep)', borderBottom: '1px solid var(--accent-deep)', padding: '6px 0' }}>
-                  An Eastside salon · Bellevue, WA
-                </span>
-              </div>
-            </Reveal>
-            <Reveal y={28} delay={160} dur={1100}>
-              <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--accent-deep)', margin: '40px 0 0' }}>
-                Styling Bellevue<br />
-                <span style={{ fontWeight: 400 }}>since 1990.</span>
-              </h1>
-            </Reveal>
-            <Reveal y={14} delay={360}>
-              <p className="grotesk" style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(28,28,28,.78)', margin: '40px 0 0', maxWidth: 480 }}>
-                A studio of considered colorists and cutters - quietly setting the standard for the Eastside.
-              </p>
-            </Reveal>
-            <Reveal y={12} delay={480}>
-              <div style={{ display: 'inline-flex', gap: 18, marginTop: 36, alignItems: 'center', flexWrap: 'wrap' }}>
-                <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill">Book a service</a>
-                <SmartLink href="/services" className="link" style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 0', fontSize: 14, letterSpacing: '.05em' }}>
-                  See the services
-                </SmartLink>
-              </div>
-            </Reveal>
-          </div>
-          <Reveal y={28} delay={240} dur={1100}>
-            <div style={{ width: '100%', height: 680, overflow: 'hidden' }}>
-              <img
-                src="/images/hero.jpg"
-                alt="Inside Salon Matarazzo — the studio floor in Bellevue, WA"
-                style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
-              />
+      {/* Hero — full-bleed video with centered content */}
+      <header style={{
+        position: 'relative', overflow: 'hidden',
+        padding: '80px 56px 80px', minHeight: 760,
+        display: 'flex', alignItems: 'center', justifyContent: 'center',
+      }}>
+        <video
+          autoPlay muted loop playsInline
+          poster="/images/hero.jpg"
+          aria-label="Inside Salon Matarazzo — the studio floor in Bellevue, WA"
+          style={{
+            position: 'absolute', inset: 0, width: '100%', height: '100%',
+            objectFit: 'cover', zIndex: 0,
+          }}
+        >
+          <source src="/videos/hero.mp4" type="video/mp4" />
+        </video>
+        {/* Scrim for text legibility over the footage */}
+        <div aria-hidden="true" style={{
+          position: 'absolute', inset: 0, zIndex: 1,
+          background: 'rgba(28,28,28,.48)',
+        }} />
+        <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 980 }}>
+          <Reveal y={12} delay={80}>
+            <div className="eyebrow" style={{ color: 'var(--accent)' }}>
+              <span style={{ display: 'inline-block', borderTop: '1px solid var(--accent)', borderBottom: '1px solid var(--accent)', padding: '6px 0' }}>
+                An Eastside salon · Bellevue, WA
+              </span>
+            </div>
+          </Reveal>
+          <Reveal y={28} delay={160} dur={1100}>
+            <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
+              Styling Bellevue<br />
+              <span style={{ fontWeight: 400, color: 'var(--accent)' }}>since 1990.</span>
+            </h1>
+          </Reveal>
+          <Reveal y={14} delay={360}>
+            <p className="grotesk" style={{ fontSize: 18, lineHeight: 1.6, color: 'rgba(255,254,242,.82)', margin: '40px auto 0', maxWidth: 480 }}>
+              A studio of considered colorists and cutters - quietly setting the standard for the Eastside.
+            </p>
+          </Reveal>
+          <Reveal y={12} delay={480}>
+            <div style={{ display: 'inline-flex', gap: 18, marginTop: 36, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
+              <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill-light">Book a service</a>
+              <SmartLink href="/services" className="link" style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 0', fontSize: 14, letterSpacing: '.05em', color: 'var(--paper)' }}>
+                See the services
+              </SmartLink>
             </div>
           </Reveal>
         </div>
