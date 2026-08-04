@@ -1,6 +1,7 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import SmartLink from './SmartLink';
 
 const LINKS = [
@@ -16,8 +17,33 @@ export default function SiteNav({ active }) {
   const [open, setOpen] = useState(false);
   const close = () => setOpen(false);
 
+  /* Home hero overlay: nav starts transparent over the video and turns
+   * solid (paper) once the user scrolls. Other pages keep the solid nav. */
+  const pathname = usePathname();
+  const overlay = pathname === '/';
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    if (!overlay) return;
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, [overlay]);
+
+  /* Expose the nav's height so the home hero can extend underneath it. */
+  const navRef = useRef(null);
+  useEffect(() => {
+    const el = navRef.current;
+    if (!el) return;
+    const set = () => document.documentElement.style.setProperty('--nav-h', el.offsetHeight + 'px');
+    set();
+    const ro = new ResizeObserver(set);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
   return (
-    <nav className="sm-nav">
+    <nav ref={navRef} className={'sm-nav' + (overlay && !scrolled && !open ? ' sm-nav--overlay' : '')}>
       <SmartLink href="/" className="sm-nav__brand serif" onClick={close}>
         SALON MATARAZZO
       </SmartLink>

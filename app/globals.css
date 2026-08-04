@@ -1157,8 +1157,23 @@ img { display: block; max-width: 100%; }
 }
 
 /* ============ Nav (desktop layout + mobile hamburger) ============ */
-nav.sm-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; position: sticky; top: 0; z-index: 30; padding: 28px 56px; background: var(--paper); border-bottom: 1px solid rgba(28,28,28,.06); }
-.sm-nav__brand { font-size: 40px; color: var(--ink); letter-spacing: .01em; font-weight: 500; text-decoration: none; justify-self: start; }
+nav.sm-nav { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; position: sticky; top: 0; z-index: 30; padding: 28px 56px; background: var(--paper); border-bottom: 1px solid rgba(28,28,28,.06); transition: background .35s ease, border-color .35s ease; }
+.sm-nav__brand { font-size: 40px; color: var(--ink); letter-spacing: .01em; font-weight: 500; text-decoration: none; justify-self: start; transition: color .35s ease; }
+
+/* Transparent state over the home hero video (before any scroll). Colors
+   flip to the on-dark palette; scrolling restores the solid paper nav. */
+nav.sm-nav.sm-nav--overlay { background: transparent; border-bottom-color: transparent; }
+nav.sm-nav.sm-nav--overlay .sm-nav__brand { color: var(--paper, #FFFEF2); }
+nav.sm-nav.sm-nav--overlay .sm-nav__links .link { color: var(--paper, #FFFEF2); }
+nav.sm-nav.sm-nav--overlay .sm-nav__cta .pill {
+  background: var(--accent, #CFAA02); color: var(--ink, #1C1C1C);
+  border-color: var(--accent, #CFAA02);
+}
+nav.sm-nav.sm-nav--overlay .sm-nav__burger span { background: var(--paper, #FFFEF2); }
+
+/* Home hero extends up underneath the (transparent) nav; the measured
+   --nav-h keeps the centered content clear of the nav itself. */
+.sm-home main > header { margin-top: calc(-1 * var(--nav-h, 96px)); padding-top: calc(80px + var(--nav-h, 96px)) !important; }
 .sm-nav__links { display: flex; gap: 48px; justify-content: center; }
 .sm-nav__cta { justify-self: end; }
 .sm-nav__burger { display: none; }
