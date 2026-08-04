@@ -128,18 +128,18 @@ export default function HomePage() {
           </div>
         </Reveal>
         <Reveal y={28} delay={160} dur={1100}>
-          <h2 className="serif" style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '48px 0 0' }}>
+          <h2 className="serif" style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
             Sit in our<br />
             <span style={{ fontWeight: 400, color: 'var(--accent)' }}>chair.</span>
           </h2>
         </Reveal>
         <Reveal y={14} delay={340}>
-          <p className="grotesk" style={{ fontSize: 17, lineHeight: 1.6, color: 'rgba(255,254,242,.7)', margin: '56px auto 0', maxWidth: 540 }}>
+          <p className="grotesk" style={{ fontSize: 17, lineHeight: 1.6, color: 'rgba(255,254,242,.7)', margin: '28px auto 0', maxWidth: 540 }}>
             First visit starts with a consultation and the beginning of a strong client-stylist relationship.
           </p>
         </Reveal>
         <Reveal y={12} delay={480}>
-          <div style={{ display: 'inline-flex', gap: 16, marginTop: 48, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
+          <div style={{ display: 'inline-flex', gap: 16, marginTop: 36, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
             <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill-light">Book online</a>
             <a href="tel:+14254542890" className="pill-ghost">Call (425) 454-2890</a>
           </div>
