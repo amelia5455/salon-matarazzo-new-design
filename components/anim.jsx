@@ -49,6 +49,40 @@ export function Reveal({ children, delay = 0, y = 18, dur = 900, as: As = 'div',
   );
 }
 
+/* Line-by-line masked reveal for large headings: each line rises from
+ * behind a clipped edge with a small stagger. Pass the heading's lines as
+ * an array; inline styles stay on the heading element itself so the
+ * responsive [style*="font-size:..."] selectors keep matching. */
+export function LinesReveal({ lines, as: As = 'h2', delay = 120, stagger = 110, dur = 950, style, className, ...rest }) {
+  /* Long fallback so below-fold headings genuinely wait for scroll-in;
+   * the IntersectionObserver is the real trigger, the timer is a safety
+   * net for environments where IO never fires. */
+  const [ref, shown] = useReveal({ fallbackMs: 8000 });
+  return (
+    <As ref={ref} className={className} style={style} {...rest}>
+      {lines.map((ln, i) => (
+        <span
+          key={i}
+          style={{
+            display: 'block', overflow: 'hidden',
+            /* room for descenders that overhang the tight line-height */
+            paddingBottom: '.12em', marginBottom: '-.12em',
+          }}
+        >
+          <span style={{
+            display: 'block',
+            transform: shown ? 'translateY(0)' : 'translateY(115%)',
+            opacity: shown ? 1 : 0,
+            transition: `transform ${dur}ms cubic-bezier(.2,.6,.2,1) ${delay + i * stagger}ms, opacity ${Math.round(dur * 0.6)}ms ease ${delay + i * stagger}ms`,
+          }}>
+            {ln}
+          </span>
+        </span>
+      ))}
+    </As>
+  );
+}
+
 export function useParallax(strength = 0.05) {
   const ref = useRef(null);
   useEffect(() => {
