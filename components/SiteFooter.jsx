@@ -18,7 +18,7 @@ export default function SiteFooter() {
             Salon <span style={{ fontWeight: 400 }}>Matarazzo</span>
           </div>
           <p className="grotesk" style={{
-            fontSize: 16, lineHeight: 1.6, color: 'rgba(28,28,28,.7)', maxWidth: 320, margin: '32px 0 0',
+            fontSize: 16, lineHeight: 1.6, color: 'rgba(28,28,28,.7)', maxWidth: 320, margin: '14px 0 0',
           }}>
             An Eastside salon, Bellevue-born. Quiet craft since 1990.
           </p>
@@ -60,8 +60,7 @@ export default function SiteFooter() {
         </div>
         <div className="grotesk" style={{ fontSize: 14, letterSpacing: '.14em', textTransform: 'uppercase', color: 'var(--ink)' }}>
           DESIGNED BY{' '}
-          <a href="https://ameliarsimpson.com" target="_blank" rel="noreferrer"
-            style={{ color: 'var(--ink)', textDecoration: 'underline', textUnderlineOffset: 3, whiteSpace: 'nowrap' }}>
+          <a href="https://ameliarsimpson.com" target="_blank" rel="noreferrer" className="footer-credit-link">
             AMELIA&nbsp;SIMPSON
           </a>
         </div>

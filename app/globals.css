@@ -1230,6 +1230,11 @@ nav.sm-nav.sm-nav--overlay .sm-nav__burger span { background: var(--paper, #FFFE
 @media (max-width: 1279px) {
   .footer-credit-bar { flex-direction: column; align-items: center; gap: 12px; text-align: center; }
 }
+.footer-credit-link {
+  color: var(--ink, #1C1C1C); text-decoration: underline; text-underline-offset: 3px;
+  white-space: nowrap; transition: color .3s ease;
+}
+.footer-credit-link:hover { color: var(--paper, #FFFEF2); }
 
 /* Footer: brand + Navigate/Hours/Find Us only fit on one row on wide
    screens. Below 1280px, switch to a single centered column so the nav
