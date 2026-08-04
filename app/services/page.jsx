@@ -35,12 +35,17 @@ export default function ServicesPage() {
       {/* ── Editorial image ────────────────────────────────────────── */}
       <section className="srv-editorial" style={{ padding: '24px 0 0' }}>
         <Reveal y={32} delay={240} dur={1200}>
-          <div style={{ width: '100%', height: 620, overflow: 'hidden' }}>
+          <div style={{ position: 'relative', width: '100%', height: 620, overflow: 'hidden' }}>
             <img
               src="/images/services/editorial.jpg"
               alt="A blow-dry and finish at Salon Matarazzo"
               style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
             />
+            {/* Fade the image into the dark service list below */}
+            <div aria-hidden="true" style={{
+              position: 'absolute', left: 0, right: 0, bottom: 0, height: '42%',
+              background: 'linear-gradient(to bottom, rgba(28,28,28,0), var(--ink))',
+            }} />
           </div>
         </Reveal>
       </section>
