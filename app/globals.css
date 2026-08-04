@@ -1169,6 +1169,10 @@ nav.sm-nav.sm-nav--overlay .sm-nav__cta .pill {
   background: var(--accent, #CFAA02); color: var(--ink, #1C1C1C);
   border-color: var(--accent, #CFAA02);
 }
+nav.sm-nav.sm-nav--overlay .sm-nav__cta .pill:hover {
+  background: var(--accent-deep, #a8880a); color: #FFFEF2;
+  border-color: var(--accent-deep, #a8880a);
+}
 nav.sm-nav.sm-nav--overlay .sm-nav__burger span { background: var(--paper, #FFFEF2); }
 
 /* Home hero extends up underneath the (transparent) nav; the measured
