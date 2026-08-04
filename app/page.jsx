@@ -36,6 +36,11 @@ export default function HomePage() {
           position: 'absolute', inset: 0, zIndex: 1,
           background: 'rgba(28,28,28,.48)',
         }} />
+        {/* Fade the footage into the dark section below */}
+        <div aria-hidden="true" style={{
+          position: 'absolute', left: 0, right: 0, bottom: 0, height: '42%', zIndex: 1,
+          background: 'linear-gradient(to bottom, rgba(28,28,28,0), var(--ink))',
+        }} />
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 980 }}>
           <Reveal y={28} delay={160} dur={1100}>
             <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
