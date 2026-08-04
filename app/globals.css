@@ -1207,12 +1207,18 @@ nav.sm-nav.sm-nav--overlay .sm-nav__burger span { background: var(--paper, #FFFE
   .sm-nav__drawer {
     display: flex !important; flex-direction: column; align-items: center; gap: 24px;
     position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--paper); border-bottom: 1px solid rgba(28,28,28,.08);
+    background: var(--paper);
+    /* border + shadow only when open: the closed drawer's border otherwise
+       paints a 1px line across the transparent nav's bottom edge */
+    border-bottom: 0; box-shadow: none;
     padding: 0 24px; max-height: 0; overflow: hidden;
     transition: max-height .35s cubic-bezier(.2,.6,.2,1), padding .35s cubic-bezier(.2,.6,.2,1);
+  }
+  .sm-nav__drawer.open {
+    max-height: 70vh; padding: 30px 24px 38px;
+    border-bottom: 1px solid rgba(28,28,28,.08);
     box-shadow: 0 18px 30px -22px rgba(28,28,28,.25);
   }
-  .sm-nav__drawer.open { max-height: 70vh; padding: 30px 24px 38px; }
   .sm-nav__drawer .link { font-size: 20px; }
   .sm-nav__drawer .pill { margin-top: 4px; }
 }
