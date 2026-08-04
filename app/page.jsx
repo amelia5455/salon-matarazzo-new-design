@@ -37,15 +37,8 @@ export default function HomePage() {
           background: 'rgba(28,28,28,.48)',
         }} />
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 980 }}>
-          <Reveal y={12} delay={80}>
-            <div className="eyebrow" style={{ color: 'var(--accent)' }}>
-              <span style={{ display: 'inline-block', borderTop: '1px solid var(--accent)', borderBottom: '1px solid var(--accent)', padding: '6px 0' }}>
-                An Eastside salon · Bellevue, WA
-              </span>
-            </div>
-          </Reveal>
           <Reveal y={28} delay={160} dur={1100}>
-            <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
+            <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
               Styling Bellevue<br />
               <span style={{ fontWeight: 400, color: 'var(--accent)' }}>since 1990.</span>
             </h1>
