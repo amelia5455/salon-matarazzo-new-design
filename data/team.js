@@ -1,6 +1,6 @@
 export const TEAM = [
   // - Stylists --------------------------------------------------
-  { id: 'ron',       first: 'Ron',       last: 'Matarazzo',   tag: 'Owner',   group: 'Stylists',
+  { id: 'ron',       first: 'Ron',       last: 'Matarazzo',   tag: 'Owner/Stylist',   group: 'Stylists',
     bio: [
       "Coming from a family of artists in New York, Ron's artistic ability was always encouraged and nurtured. From there he found his creative outlet in hair cutting. He has taken his trade to the highest level, working first in New York, where he was involved in a family salon, and then in Beverly Hills where he trained and worked at Vidal Sassoon.",
       "Ron approaches each haircut as a work of art, and with 50 years of experience he has worked with every type of hair texture and head shape. With his artistic eye and thorough attention to detail he has built a large and faithful clientele since moving to Seattle over 40 years ago — many of his clients have been coming to him since day one.",
@@ -73,10 +73,10 @@ export const TEAM = [
   },
   { id: 'morgan',    first: 'Morgan',    last: 'Chatterton',  tag: 'Stylist', group: 'Stylists',
     bio: [
-      "Morgan started working at Salon Matarazzo in 2013. She attended Evergreen Beauty College, studying cosmetology and business, and in addition to her schooling and training at Salon Matarazzo, she attends classes regularly to stay up to date on the latest styles and techniques.",
-      "Morgan has always had a creative eye and a love of hair and beauty. She has been an artist her whole life, and has found a career that lets her use that as a creative outlet.",
-      "She has been training alongside Ron and Lorane, learning Sassoon-style cutting and coloring to perfect her craft. With her sweet and caring nature, she will make you feel at ease and welcomed the moment you meet her.",
-      "“I believe in customizing every client's haircut and color to what best suits them — their look and their lifestyle. I love making clients look and feel beautiful.”",
+      "Hi, I'm Morgan! With 13 years behind the chair, I'm passionate about creating beautiful, customized hair that complements your features and fits your lifestyle. I truly love helping my clients feel confident and look their best.",
+      "After graduating from Evergreen Beauty College, I continued my education with advanced training from Vidal Sassoon professionals, razor-cut specialists, and leading color artists. I specialize in lived-in color, balayage, dimensional blondes, rich radiant reds, custom color, root touch-ups, and precision haircuts.",
+      "My philosophy is simple: your hair should feel like you — only better. Every appointment is tailored to your hair type, face shape, personal style, and maintenance preferences to create a look that's flattering, timeless, and uniquely yours.",
+      "Whether you'd like to chat and catch up or simply enjoy a little quiet time, I want every appointment to feel relaxing and personalized. My goal is for you to leave feeling refreshed, cared for, and in love with your hair.",
     ],
   },
   { id: 'nancy',     first: 'Nancy',     last: 'Nav',         tag: 'Stylist', group: 'Stylists',
