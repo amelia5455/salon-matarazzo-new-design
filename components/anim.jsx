@@ -24,7 +24,10 @@ export function useReveal(opts = {}) {
       { threshold: opts.threshold ?? 0.12, rootMargin: opts.rootMargin ?? '0px 0px -8% 0px' }
     );
     io.observe(el);
-    const t = setTimeout(() => setShown(true), opts.fallbackMs ?? 480);
+    /* Long fallback: the IntersectionObserver is the real trigger, so
+     * below-fold text genuinely reveals on scroll-in. The timer is only a
+     * safety net for environments where IO never fires. */
+    const t = setTimeout(() => setShown(true), opts.fallbackMs ?? 6000);
     return () => { io.disconnect(); clearTimeout(t); };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return [ref, shown];
