@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { usePathname } from 'next/navigation';
 import SmartLink from './SmartLink';
+import RollText from './RollText';
 
 const LINKS = [
   { key: 'services', label: 'Services', href: '/services' },
@@ -57,7 +58,7 @@ export default function SiteNav({ active }) {
       </div>
 
       <div className="sm-nav__cta">
-        <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill">Book</a>
+        <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill"><RollText>Book</RollText></a>
       </div>
 
       <button
@@ -76,7 +77,7 @@ export default function SiteNav({ active }) {
             {l.label}
           </SmartLink>
         ))}
-        <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill" onClick={close}>Book</a>
+        <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill" onClick={close}><RollText>Book</RollText></a>
       </div>
     </nav>
   );

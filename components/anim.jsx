@@ -76,6 +76,18 @@ export function useParallax(strength = 0.05) {
   return ref;
 }
 
+/* Continuous scroll-linked drift: the element eases a few pixels against
+ * the scroll direction (rAF-throttled via useParallax). Subtle depth with
+ * no entrance "event" — motion lives entirely in the scroll. */
+export function Drift({ children, strength = 0.05, as: As = 'div', style, className, ...rest }) {
+  const ref = useParallax(strength);
+  return (
+    <As ref={ref} className={className} style={{ willChange: 'transform', ...style }} {...rest}>
+      {children}
+    </As>
+  );
+}
+
 export function HoverZoom({ children, scale = 1.04, dur = 1200, style, ...rest }) {
   const [h, setH] = useState(false);
   return (

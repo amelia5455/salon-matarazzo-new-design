@@ -1236,6 +1236,20 @@ nav.sm-nav.sm-nav--overlay .sm-nav__burger span { background: var(--paper, #FFFE
 }
 .footer-credit-link:hover { color: var(--paper, #FFFEF2); }
 
+/* ============ Rolling button labels ============
+   Two stacked copies of the label in a clipped one-line box; hovering the
+   button shifts both up a line so the text rolls over itself. */
+.roll-box { display: block; position: relative; overflow: hidden; }
+.roll-line {
+  display: block; white-space: nowrap;
+  transition: transform .45s cubic-bezier(.2,.6,.2,1);
+}
+.roll-line + .roll-line { position: absolute; left: 0; top: 100%; width: 100%; }
+.pill:hover .roll-line,
+.pill-light:hover .roll-line,
+.pill-ghost:hover .roll-line,
+.chip:hover .roll-line { transform: translateY(-100%); }
+
 /* Footer: brand + Navigate/Hours/Find Us only fit on one row on wide
    screens. Below 1280px, switch to a single centered column so the nav
    columns never wrap into an uneven 2-up-then-1 arrangement. */

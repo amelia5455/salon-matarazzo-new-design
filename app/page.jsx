@@ -1,6 +1,7 @@
 import PageShell from '@/components/PageShell';
-import { Reveal } from '@/components/anim';
+import { Reveal, Drift } from '@/components/anim';
 import SmartLink from '@/components/SmartLink';
+import RollText from '@/components/RollText';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import { TESTIMONIALS } from '@/data/testimonials';
 
@@ -55,7 +56,7 @@ export default function HomePage() {
           </Reveal>
           <Reveal y={12} delay={480}>
             <div style={{ display: 'inline-flex', gap: 18, marginTop: 36, alignItems: 'center', flexWrap: 'wrap', justifyContent: 'center' }}>
-              <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill-light">Book a service</a>
+              <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill-light"><RollText>Book a service</RollText></a>
               <SmartLink href="/services" className="link" style={{ display: 'inline-flex', alignItems: 'center', padding: '14px 0', fontSize: 14, letterSpacing: '.05em', color: 'var(--paper)' }}>
                 See the services
               </SmartLink>
@@ -75,10 +76,12 @@ export default function HomePage() {
         </Reveal>
         <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 96, alignItems: 'start', marginTop: 56 }}>
           <Reveal y={24} delay={160} dur={1100}>
-            <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
-              Thirty-six years,<br />
-              <span style={{ fontWeight: 400, color: 'var(--accent)' }}>one client at a time.</span>
-            </h2>
+            <Drift strength={0.05}>
+              <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
+                Thirty-six years,<br />
+                <span style={{ fontWeight: 400, color: 'var(--accent)' }}>one client at a time.</span>
+              </h2>
+            </Drift>
           </Reveal>
           <div style={{ paddingTop: 24 }}>
             <Reveal y={20} delay={240}>
@@ -110,10 +113,12 @@ export default function HomePage() {
           </div>
         </Reveal>
         <Reveal y={24} delay={140} dur={1100}>
-          <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--ink)', margin: '36px 0 80px', maxWidth: 1000 }}>
-            Kind words,<br />
-            <span style={{ fontWeight: 400, color: 'var(--accent-deep)' }}>year after year.</span>
-          </h2>
+          <Drift strength={0.05}>
+            <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--ink)', margin: '36px 0 80px', maxWidth: 1000 }}>
+              Kind words,<br />
+              <span style={{ fontWeight: 400, color: 'var(--accent-deep)' }}>year after year.</span>
+            </h2>
+          </Drift>
         </Reveal>
         <TestimonialCarousel items={TESTIMONIALS} />
       </section>
@@ -128,10 +133,12 @@ export default function HomePage() {
           </div>
         </Reveal>
         <Reveal y={28} delay={160} dur={1100}>
-          <h2 className="serif" style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
-            Sit in our<br />
-            <span style={{ fontWeight: 400, color: 'var(--accent)' }}>chair.</span>
-          </h2>
+          <Drift strength={0.05}>
+            <h2 className="serif" style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
+              Sit in our<br />
+              <span style={{ fontWeight: 400, color: 'var(--accent)' }}>chair.</span>
+            </h2>
+          </Drift>
         </Reveal>
         <Reveal y={14} delay={340}>
           <p className="grotesk" style={{ fontSize: 17, lineHeight: 1.6, color: 'rgba(255,254,242,.7)', margin: '28px auto 0', maxWidth: 540 }}>
@@ -140,8 +147,8 @@ export default function HomePage() {
         </Reveal>
         <Reveal y={12} delay={480}>
           <div style={{ display: 'inline-flex', gap: 16, marginTop: 36, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-            <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill-light">Book online</a>
-            <a href="tel:+14254542890" className="pill-ghost">Call (425) 454-2890</a>
+            <a href={BOOK_URL} target="_blank" rel="noreferrer" className="pill-light"><RollText>Book online</RollText></a>
+            <a href="tel:+14254542890" className="pill-ghost"><RollText>Call (425) 454-2890</RollText></a>
           </div>
         </Reveal>
       </section>

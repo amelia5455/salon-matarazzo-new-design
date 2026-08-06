@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import TeamCard from '@/components/TeamCard';
+import RollText from '@/components/RollText';
 import { TEAM } from '@/data/team';
 
 const FILTERS = ['All', 'Stylists', 'Front Desk'];
@@ -30,7 +31,7 @@ export default function TeamGrid() {
                 key={f}
                 className={'chip' + (filter === f ? ' is-active' : '')}
                 onClick={() => setFilter(f)}>
-                {f}
+                <RollText>{f}</RollText>
               </button>
             )}
           </div>
