@@ -1236,19 +1236,27 @@ nav.sm-nav.sm-nav--overlay .sm-nav__burger span { background: var(--paper, #FFFE
 }
 .footer-credit-link:hover { color: var(--paper, #FFFEF2); }
 
-/* ============ Rolling button labels ============
-   Two stacked copies of the label in a clipped one-line box; hovering the
-   button shifts both up a line so the text rolls over itself. */
+/* ============ Rolling button labels (letter by letter) ============
+   Two stacked copies of the label in a clipped one-line box, split into
+   characters. Hovering the button rolls each letter up a line; the
+   per-letter transition-delay (set inline) creates the cascade. */
 .roll-box { display: block; position: relative; overflow: hidden; }
-.roll-line {
-  display: block; white-space: nowrap;
-  transition: transform .45s cubic-bezier(.2,.6,.2,1);
-}
+.roll-line { display: block; white-space: nowrap; }
 .roll-line + .roll-line { position: absolute; left: 0; top: 100%; width: 100%; }
-.pill:hover .roll-line,
-.pill-light:hover .roll-line,
-.pill-ghost:hover .roll-line,
-.chip:hover .roll-line { transform: translateY(-100%); }
+.roll-ch {
+  display: inline-block;
+  transition: transform .4s cubic-bezier(.2,.6,.2,1);
+}
+.pill:hover .roll-ch,
+.pill-light:hover .roll-ch,
+.pill-ghost:hover .roll-ch,
+.chip:hover .roll-ch { transform: translateY(-100%); }
+
+/* visually hidden but readable by screen readers */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
 
 /* Footer: brand + Navigate/Hours/Find Us only fit on one row on wide
    screens. Below 1280px, switch to a single centered column so the nav
