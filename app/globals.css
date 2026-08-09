@@ -855,21 +855,28 @@ img { display: block; max-width: 100%; }
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
         }
-        /* Promotion band across the card photo (front face) */
+        /* Promotion caption across the card photo (front face): a soft
+           ink gradient rising from the bottom edge, accent title, fine
+           cream copy — reads like an editorial caption, not a banner. */
         .sm-team .card .card-promo {
           position: absolute; left: 0; right: 0; bottom: 0;
-          background: var(--accent); color: var(--ink);
-          padding: 14px 16px 15px;
+          background: linear-gradient(to top,
+            rgba(28,28,28,.94) 0%, rgba(28,28,28,.78) 52%, rgba(28,28,28,0) 100%);
+          color: var(--paper);
+          padding: 44px 18px 16px;
           pointer-events: none;
-          display: flex; flex-direction: column; gap: 5px;
+          display: flex; flex-direction: column; gap: 7px;
           text-align: left;
         }
         .sm-team .card .card-promo strong {
-          font: 600 11px/1 "Manrope", system-ui, sans-serif;
-          letter-spacing: .18em; text-transform: uppercase;
+          font: 600 10px/1 "Manrope", system-ui, sans-serif;
+          letter-spacing: .24em; text-transform: uppercase;
+          color: var(--accent);
         }
         .sm-team .card .card-promo span {
-          font: 400 12px/1.5 "Manrope", system-ui, sans-serif;
+          font: 400 11.5px/1.55 "Manrope", system-ui, sans-serif;
+          color: rgba(255,254,242,.9);
+          max-width: 34ch;
         }
         .sm-team .card .face.back {
           transform: rotateY(180deg);

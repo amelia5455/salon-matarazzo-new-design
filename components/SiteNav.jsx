@@ -6,6 +6,7 @@ import SmartLink from './SmartLink';
 import RollText from './RollText';
 
 const LINKS = [
+  { key: 'home', label: 'Home', href: '/' },
   { key: 'services', label: 'Services', href: '/services' },
   { key: 'team', label: 'Team', href: '/team' },
   { key: 'products', label: 'Products', href: '/products' },
