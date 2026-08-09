@@ -4,7 +4,7 @@ import { Reveal } from '@/components/anim';
 import { DEFAULT_BIO } from '@/data/team';
 
 /* Team card — image on front, bio on the flip side. */
-export default function TeamCard({ idx, id, first, last, tag, bio, instagram }) {
+export default function TeamCard({ idx, id, first, last, tag, bio, instagram, promo }) {
   const igHandle = instagram
     ? '@' + (instagram.match(/instagram\.com\/([^\/?#]+)/) || [, ''])[1]
     : null;
@@ -20,6 +20,12 @@ export default function TeamCard({ idx, id, first, last, tag, bio, instagram }) 
                 alt={`${first}${last ? ' ' + last : ''}`}
                 loading="lazy"
                 style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+              {promo &&
+                <div className="card-promo">
+                  <strong>{promo.title}</strong>
+                  <span>{promo.body}</span>
+                </div>
+              }
             </div>
             <div className="face back">
               <div>

@@ -855,6 +855,22 @@ img { display: block; max-width: 100%; }
           backface-visibility: hidden;
           -webkit-backface-visibility: hidden;
         }
+        /* Promotion band across the card photo (front face) */
+        .sm-team .card .card-promo {
+          position: absolute; left: 0; right: 0; bottom: 0;
+          background: var(--accent); color: var(--ink);
+          padding: 14px 16px 15px;
+          pointer-events: none;
+          display: flex; flex-direction: column; gap: 5px;
+          text-align: left;
+        }
+        .sm-team .card .card-promo strong {
+          font: 600 11px/1 "Manrope", system-ui, sans-serif;
+          letter-spacing: .18em; text-transform: uppercase;
+        }
+        .sm-team .card .card-promo span {
+          font: 400 12px/1.5 "Manrope", system-ui, sans-serif;
+        }
         .sm-team .card .face.back {
           transform: rotateY(180deg);
           background: var(--ink); color: var(--paper);
