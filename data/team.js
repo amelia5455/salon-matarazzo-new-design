@@ -75,7 +75,7 @@ export const TEAM = [
       "Lexi is one of the most complete hair designers in the business. Schedule a visit and you will see why her clients have not only been loyally going to her for years, but also consider her a friend.",
     ],
   },
-  { id: 'morgan',    first: 'Morgan',    last: 'Chatterton',  tag: 'Stylist', group: 'Stylists',
+  { id: 'morgan',    first: 'Morgan',    last: '',            tag: 'Stylist', group: 'Stylists',
     bio: [
       "Hi, I'm Morgan! With 13 years behind the chair, I'm passionate about creating beautiful, customized hair that complements your features and fits your lifestyle. I truly love helping my clients feel confident and look their best.",
       "After graduating from Evergreen Beauty College, I continued my education with advanced training from Vidal Sassoon professionals, razor-cut specialists, and leading color artists. I specialize in lived-in color, balayage, dimensional blondes, rich radiant reds, custom color, root touch-ups, and precision haircuts.",

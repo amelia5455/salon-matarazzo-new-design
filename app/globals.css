@@ -820,11 +820,6 @@ img { display: block; max-width: 100%; }
         }
         .sm-team .chip:hover { border-color: var(--accent-deep); color: var(--accent-deep); }
         .sm-team .chip.is-active { color: var(--accent-deep); border-color: var(--accent-deep); }
-        .sm-team .chip.is-active::before {
-          content: ''; display: inline-block; width: 6px; height: 6px;
-          border-radius: 50%; background: var(--accent-deep);
-          margin-right: 10px; vertical-align: middle;
-        }
 
         /* Tag inline beside team name */
         .sm-team .tag {
