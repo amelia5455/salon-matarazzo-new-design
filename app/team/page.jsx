@@ -39,8 +39,8 @@ export default function TeamPage() {
             fontSize: 18, lineHeight: 1.6, color: 'rgba(28,28,28,.78)',
             margin: '40px 0 0', maxWidth: 560,
           }}>
-            Senior colorists and cutters - most have been behind the chair.
-            Quiet practice, individual to each guest.
+            Senior colorists and cutters - most have been behind the chair
+            for more than a decade. Quiet practice, individual to each guest.
           </p>
         </Reveal>
       </header>
