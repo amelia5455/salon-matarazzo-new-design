@@ -15,7 +15,7 @@ export default function InfoCol({ num, kicker, heading, headingColor, body, foot
         </div>
 
         <h3 className="serif" style={{
-          fontSize: 56, lineHeight: 1, letterSpacing: '-.015em',
+          fontSize: 'clamp(32px, 8vw, 56px)', lineHeight: 1, letterSpacing: '-.015em',
           color: headingColor || 'var(--paper)', margin: '0 0 36px'
         }}>
           {heading}

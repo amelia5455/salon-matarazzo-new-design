@@ -44,7 +44,7 @@ export default function HomePage() {
         }} />
         <div style={{ position: 'relative', zIndex: 2, textAlign: 'center', maxWidth: 980 }}>
           <Reveal y={28} delay={160} dur={1100}>
-            <h1 className="serif" style={{ fontSize: 144, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
+            <h1 className="serif" style={{ fontSize: 'clamp(42px, 13.5vw, 144px)', lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
               Styling Bellevue<br />
               <span style={{ fontWeight: 400, color: 'var(--accent)' }}>since 1990.</span>
             </h1>
@@ -77,7 +77,7 @@ export default function HomePage() {
         <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 96, alignItems: 'start', marginTop: 56 }}>
           <Reveal y={24} delay={160} dur={1100}>
             <Drift strength={0.05}>
-              <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
+              <h2 className="serif" style={{ fontSize: 'clamp(34px, 10.5vw, 112px)', lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--paper)', margin: 0 }}>
                 Thirty-six years,<br />
                 <span style={{ fontWeight: 400, color: 'var(--accent)' }}>one client at a time.</span>
               </h2>
@@ -114,7 +114,7 @@ export default function HomePage() {
         </Reveal>
         <Reveal y={24} delay={140} dur={1100}>
           <Drift strength={0.05}>
-            <h2 className="serif" style={{ fontSize: 112, lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--ink)', margin: '36px 0 80px', maxWidth: 1000 }}>
+            <h2 className="serif" style={{ fontSize: 'clamp(34px, 10.5vw, 112px)', lineHeight: 0.96, letterSpacing: '-.02em', color: 'var(--ink)', margin: '36px 0 80px', maxWidth: 1000 }}>
               Kind words,<br />
               <span style={{ fontWeight: 400, color: 'var(--accent-deep)' }}>year after year.</span>
             </h2>
@@ -134,7 +134,7 @@ export default function HomePage() {
         </Reveal>
         <Reveal y={28} delay={160} dur={1100}>
           <Drift strength={0.05}>
-            <h2 className="serif" style={{ fontSize: 168, lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
+            <h2 className="serif" style={{ fontSize: 'clamp(46px, 15vw, 168px)', lineHeight: 0.92, letterSpacing: '-.02em', color: 'var(--paper)', margin: '40px 0 0' }}>
               Sit in our<br />
               <span style={{ fontWeight: 400, color: 'var(--accent)' }}>chair.</span>
             </h2>

@@ -52,7 +52,7 @@ export default function TeamCard({ idx, id, first, last, tag, bio, instagram, pr
         {/* Caption */}
         <div style={{ marginTop: 28 }}>
           <h3 className="serif" style={{
-            fontSize: 44, lineHeight: 1, letterSpacing: '-.012em',
+            fontSize: 'clamp(27px, 6.5vw, 44px)', lineHeight: 1, letterSpacing: '-.012em',
             margin: 0, color: 'var(--accent-deep)',
             display: 'inline',
           }}>

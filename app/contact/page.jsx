@@ -27,7 +27,7 @@ export default function ContactPage() {
         </Reveal>
         <Reveal y={28} delay={160} dur={1100}>
           <h1 className="serif" style={{
-            fontSize: 168, lineHeight: .92, letterSpacing: '-.02em',
+            fontSize: 'clamp(46px, 15vw, 168px)', lineHeight: .92, letterSpacing: '-.02em',
             color: 'var(--accent-deep)', margin: '40px 0 0'
           }}>
             Find us in<br />

@@ -14,7 +14,7 @@ export default function SiteFooter() {
         gap: 80, paddingBottom: 120, alignItems: 'start',
       }}>
         <div>
-          <div className="serif" style={{ fontSize: 56, lineHeight: 1, letterSpacing: '-.015em', color: 'var(--ink)' }}>
+          <div className="serif" style={{ fontSize: 'clamp(32px, 8vw, 56px)', lineHeight: 1, letterSpacing: '-.015em', color: 'var(--ink)' }}>
             Salon <span style={{ fontWeight: 400 }}>Matarazzo</span>
           </div>
           <p className="grotesk" style={{

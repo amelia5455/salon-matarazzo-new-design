@@ -7,7 +7,7 @@ export default function ServiceRow({ idx, num, name, tagline, body, slotId, imag
   return (
     <>
       <Reveal y={28} delay={80}>
-        <div style={{
+        <div className="srv-row" style={{
           display: 'grid',
           gridTemplateColumns: '80px 380px 1fr',
           gap: 80,
@@ -41,7 +41,7 @@ export default function ServiceRow({ idx, num, name, tagline, body, slotId, imag
           {/* Copy */}
           <div style={{ paddingTop: 4 }}>
             <h2 className="serif" style={{
-              fontSize: 92, lineHeight: .98, letterSpacing: '-.015em',
+              fontSize: 'clamp(32px, 9vw, 92px)', lineHeight: .98, letterSpacing: '-.015em',
               color: 'var(--paper)', margin: 0
             }}>
               {name}
