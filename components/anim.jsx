@@ -24,10 +24,12 @@ export function useReveal(opts = {}) {
       { threshold: opts.threshold ?? 0.12, rootMargin: opts.rootMargin ?? '0px 0px -8% 0px' }
     );
     io.observe(el);
-    /* Long fallback: the IntersectionObserver is the real trigger, so
-     * below-fold text genuinely reveals on scroll-in. The timer is only a
-     * safety net for environments where IO never fires. */
-    const t = setTimeout(() => setShown(true), opts.fallbackMs ?? 6000);
+    /* Desktop: long fallback so the IntersectionObserver genuinely drives
+     * reveals on scroll-in (the timer is only a safety net). Mobile: fast
+     * fallback — with quick thumb-scrolling, late fade-ins read as blank
+     * sections, so content shows promptly like it did pre-scroll-reveals. */
+    const isMobile = window.matchMedia('(max-width: 820px), (pointer: coarse)').matches;
+    const t = setTimeout(() => setShown(true), isMobile ? 480 : (opts.fallbackMs ?? 6000));
     return () => { io.disconnect(); clearTimeout(t); };
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
   return [ref, shown];

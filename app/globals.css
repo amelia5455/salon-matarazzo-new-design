@@ -761,6 +761,9 @@ img { display: block; max-width: 100%; }
           .sm-srv [style*="gap:96px"] { gap: 44px !important; }
           .sm-srv [style*="gap:80px"] { gap: 40px !important; }
           .sm-srv [style*="gap:64px"] { gap: 36px !important; }
+          /* service rows: 120px paddings stack into dead voids when the
+             row goes single-column — tighten on mobile */
+          .sm-srv [style*="padding:120px 0"] { padding-top: 56px !important; padding-bottom: 56px !important; }
           .sm-srv section { padding-top: 88px !important; padding-bottom: 88px !important; }
           /* nav -> wrap */
           .sm-srv nav { display: flex !important; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 18px; }
