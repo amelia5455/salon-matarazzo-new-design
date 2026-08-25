@@ -17,7 +17,6 @@ export const metadata = {
     siteName: 'Salon Matarazzo',
   },
   twitter: { card: 'summary_large_image', title: 'Salon Matarazzo — Bellevue, WA' },
-  icons: { icon: '/favicon.ico' },
 };
 
 export const viewport = {
