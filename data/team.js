@@ -42,10 +42,6 @@ export const TEAM = [
     ],
   },
   { id: 'jaimelynn', first: 'Jaimelynn', last: '',            tag: 'Stylist', group: 'Stylists',
-    promo: {
-      title: 'New Client Special',
-      body: 'Receive 40% off your haircut with any color or highlighting service. Offer good through September 30, 2026.',
-    },
     bio: [
       "Jaime Lynn is an advanced color specialist with over 20 years of experience creating beautiful, customized hair color. She began her career at Gene Juarez, where she specialized in advanced color and highlighting, before continuing her education at Vidal Sassoon, focusing on cutting and hair design. Committed to mastering her craft, Jaime has continued her education & internationally trained through recognized programs, including Wella Trend Vision, L'Oréal Professionnel, Kevin Murphy, and Master Balayage Boot Camp. She has also served as an educator and mentor, sharing her passion and expertise with fellow stylists.",
       "Known for her attention to detail and personalized approach, Jaime specializes in dimensional color, balayage, blonding, foiling, gray blending, and designer haircuts. She is passionate about creating healthy, beautiful hair that complements each client's lifestyle. Whether you're looking for a low-maintenance, lived-in look or a high-maintenance, transformative color, Jaime is committed to delivering the results you envision. Her goal is for every guest to leave her chair feeling confident, refreshed, and beautiful.",
