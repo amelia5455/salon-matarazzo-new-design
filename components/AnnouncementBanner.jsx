@@ -4,9 +4,13 @@ import { useState } from 'react';
 
 const SHOP_URL = 'https://shop-links.co/cgkfytcWNyZ';
 
+/* Hidden while waiting on a fresh affiliate link from the R+Co rep —
+   flip to true (and update SHOP_URL) to bring the banner back. */
+const SHOW_BANNER = false;
+
 export default function AnnouncementBanner() {
   const [open, setOpen] = useState(true);
-  if (!open) return null;
+  if (!SHOW_BANNER || !open) return null;
   return (
     <div className="sm-banner" style={{
       background: 'var(--accent)', color: 'var(--ink)',
